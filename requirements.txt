@@ -1,0 +1,7 @@
+streamlit
+qdrant-client
+google-generativeai
+python-dotenv
+langchain-text-splitters
+pypdf
+python-docx
