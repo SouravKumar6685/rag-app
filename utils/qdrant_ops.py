@@ -23,12 +23,12 @@ class QdrantManager:
         )
 
     def search(self, query_vector, top_k=5):
-        results = self.client.search(
+        results = self.client.query_points(
             collection_name=self.collection_name,
-            query_vector=query_vector,
+            query=query_vector,
             limit=top_k
         )
-        return results
+        return results.points
 
     def get_collection_info(self):
         """Return collection info (e.g., number of points)."""
